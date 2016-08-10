@@ -1,0 +1,40 @@
+body{
+	background: url(../img/bg.png) no-repeat ; 
+    background-size: 110%;
+}
+
+.container{
+	font-size: 20px;
+	padding: 10%;
+	position: fixed;
+	top: 17%;
+	color: #FFF;
+}
+
+#exit{
+	background: url(../img/exit.png) no-repeat;
+	background-size: contain;
+	padding: 2px;
+	border: none;
+	height: 12%;
+	width: 20%;
+	position: fixed;
+	right: 8%;
+	top: 6%;
+}
+
+#treasure{
+	background: url(../img/treasure.png) no-repeat;
+	background-size: contain;
+	padding: 2px;
+	border: none;
+	height: 37%;
+	width: 70%;
+	position: fixed;
+	left: 15%;
+	bottom: 15%;	
+}
+
+	:focus{
+		outline: 0 !important;
+	}

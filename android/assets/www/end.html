@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Gallery of Treasures</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+	<link href="css/custom.end.css" rel="stylesheet" type="text/css">
+	
+	
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="CorHttpd.js"></script>
+	<script type="text/javascript" charset="utf-8" src="http://localhost:8080/js/jquery-3.1.0.js"></script>
+	<script src="http://localhost:8080/js/jquery.mobile-1.4.5.js"></script>
+		 <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+        getTitle();
+    }
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+		httpd = ( cordova && cordova.plugins && cordova.plugins.CorHttpd ) ? cordova.plugins.CorHttpd : null;
+		//alert(httpd);
+		$(document).ready();
+		playAudio("http://localhost:8080/treasure.mp3");
+		buttonHandlers();
+    }
+    
+	// Handle the back button
+    //
+    function onBackKeyDown() {
+        console.log('Backbutton key pressed');
+    }
+	
+	function buttonHandlers(){
+		$("#treasure").click(function(){
+			playAudio("http://localhost:8080/treasure.mp3");
+			});
+		$("#exit").click(function(){
+		    stopServer();
+			navigator.app.exitApp();
+			});
+	}
+	
+	function playAudio(src) {
+		var audio = null;
+            if (audio == null) {
+                audio = new Media(src, onSuccess, onError);
+            }
+            audio.play();
+        }
+		
+		function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+       
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        }
+		
+		function stopServer() {
+			if ( httpd ) {
+				httpd.stopServer();
+				//alert('stopped');
+			}
+			else
+				alert('CorHttpd plugin not available/ready.');
+		}
+    </script>
+  </head>
+  
+  <body onload="onLoad()">	
+		<button id="exit"></button>
+		<div class="container">Μόλις αποκτήσατε μια εικόνα υψηλής ανάλυσης του πίνακα ""</div>
+		<button id="treasure"></button>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://localhost:8080/js/bootstrap.min.js"></script>
+	<script src="http://localhost:8080/js/jquery-1.12.4.min.js"></script>
+  </body>
+</html>

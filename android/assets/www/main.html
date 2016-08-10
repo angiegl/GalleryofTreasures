@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Gallery of Treasures</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+	<link href="css/custom.main.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" charset="utf-8" src="http://localhost:8080/js/jquery-3.1.0.js"></script>
+	<script src="http://localhost:8080/js/jquery.mobile-1.4.5.js"></script>
+	    <script type="text/javascript" charset="utf-8">
+
+        // Wait for device API libraries to load
+        //
+        function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+        getTitle();
+		}
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            document.addEventListener("backbutton", onBackKeyDown, false);
+			$(document).ready();
+			fadeInAnim();
+			openFile('http://localhost:8080/quiz.xml');	 
+        }
+
+        // Audio player
+        //
+        function playAudio(src) {
+		var audio = null;
+            if (audio == null) {
+                audio = new Media(src, onSuccess, onError);
+            }
+            audio.play();
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        }
+
+		// Handle the back button
+		//
+		function onBackKeyDown() {
+			console.log('Backbutton key pressed');
+		}
+		
+		//Animation
+		//
+		function fadeInAnim(){
+			$("#container").fadeIn(1000);
+		}
+		
+		// Open .xml file
+		//
+		function openFile(file) {
+			var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					display(xmlhttp);
+					//alert('loading quiz.xml');
+				}
+			};
+			xmlhttp.open("GET", file, true);
+			xmlhttp.send();
+		}
+		
+		function display(xml){
+			numberFrame(xml);
+		}
+		
+		function numberFrame(xml){
+			//$("#fr1, #fr2, #fr3, #fr4, #fr5, #fr6, #fr7, #fr8, #fr9, #fr10, #fr11, #fr12, #fr13, #fr14, #fr15, #fr16, #fr17").unbind('click');
+			$ ("#fr1, #fr2, #fr3, #fr4, #fr5, #fr6, #fr7, #fr8, #fr9, #fr10, #fr11, #fr12, #fr13, #fr14, #fr15, #fr16, #fr17" ).click(function(){
+				id = parseInt($(this).attr('id').substring(2));
+				//alert("ID:" + id );
+				chooseQuestion(xml);
+				enableNext();
+			});
+		} 
+
+		function enableNext(){
+			var nextid=id+1;
+			$("#ans1, #ans2, #ans3, #ans4" ).click(function(){
+				$( "#fr" + nextid ).prop( "disabled", false );
+				$( "#fr" + nextid ).css( {'-webkit-filter': 'grayscale(0%)', });
+				$("#hintbtn").prop("disabled", true );
+				// and disableCurrent
+				$( '#fr'+ id ).prop( "disabled", true );
+			});
+		}
+		
+		function chooseQuestion(xml){
+			xmlDoc = xml.responseXML;
+			q = xmlDoc.getElementsByTagName("item");
+			var coords = 0;
+			switch(id) {
+				case 1:
+					coords = 111;
+					indexCoords(coords);	
+				break;
+				case 2:
+					coords = 112;
+					indexCoords(coords);
+				break;
+				case 3:
+					coords = 121;
+					indexCoords(coords,id);
+				break;
+				case 4:
+					coords = 122;
+					indexCoords(coords,id);
+				break;
+				case 5:
+					coords = 131;
+					indexCoords(coords,id);
+				break;
+				case 6:
+					coords = 132;
+					indexCoords(coords,id);
+				break;
+				case 7:
+					$( "#dialog" ).css( {'background': 'url(img/stairs.png) no-repeat', 'background-size': '100%' });
+					coords = 102;
+					indexCoords(coords,id);
+				break;
+				case 8:
+					$( "#dialog" ).css( {'background': '', 'background-size': '' });
+					coords = 211;
+					indexCoords(coords,id);
+				break;
+				case 9:
+					coords = 212;
+					indexCoords(coords,id);
+				break;
+				case 10:
+					coords = 221;
+					indexCoords(coords,id);
+				break;
+				case 11:
+					coords = 222;
+					indexCoords(coords,id);
+				break;
+				case 12:
+					coords = 231;
+					indexCoords(coords,id);
+				break;
+				case 13:
+					coords = 232;
+					indexCoords(coords,id);
+				break;
+				case 14:
+					//$("#emojidiv").css({'-webkit-transform': 'matrix(-1,0,0,0,-30,0')});
+					$( "#dialog" ).css( {'background': 'url(img/stairs.png) no-repeat', 'background-size': '100%', 'transform': 'scaleX(-1)' });
+					$("#dialogcontainer, #hintdiv").css({'transform': 'scaleX(-1)'});
+					coords = 203;
+					indexCoords(coords,id);
+				break;
+				case 15:
+					$( "#dialog" ).css( {'background': '', 'background-size': '' });
+					coords = 311;
+					indexCoords(coords,id);
+				break;
+				case 16:
+					coords = 321;
+					indexCoords(coords,id);
+				break;
+				case 17:
+					coords = 331;
+					fadeOutAnim(coords,id);
+				break;
+				default:
+			}      
+		}
+		
+		function indexCoords(coords){
+			var coordinates = [0];
+			var random = [0];
+			var count = 0;
+			for (i = 0; i < q.length; i++) {
+				coordinates[i] = q[i].getElementsByTagName("coords")[0].childNodes[0].nodeValue;
+				if (coordinates[i] == coords){
+					count++;
+					random[count] = i ;
+				}
+			}
+			
+			var j = Math.floor((Math.random() * count) + 1);
+			var itemid = random[j];
+			question(itemid);
+		}
+		
+		function question(itemid){
+			var points = [2, 1, 3, 4];
+			points.sort(function() {
+				return .3 - Math.random();
+			});		
+					document.getElementById("question").innerHTML = q[itemid].getElementsByTagName("question")[0].childNodes[0].textContent;
+					document.getElementById("hintdiv").innerHTML = q[itemid].getElementsByTagName("hint")[0].childNodes[0].textContent;
+					for (l=0; l<4; l++)
+						document.getElementById("ans"+(l+1)).value = q[itemid].getElementsByTagName("option"+points[l])[0].childNodes[0].textContent;
+	
+				
+				var correct = q[itemid].getElementsByTagName("option1")[0].childNodes[0].textContent;
+				var img = q[itemid].getElementsByTagName("image")[0].childNodes[0].textContent;
+				displayDialog(correct,img);	
+		}
+		
+		function displayDialog(correct,img){
+					decolorize();
+					window.location.href="#dialog";
+					showHint();
+					colorize(correct,img);
+		}
+		
+		function showHint(){
+			$("#hintbtn").unbind('click');
+			$("#hintbtn").click(function(){
+				$("#hintbtn").prop("disabled", true );
+				$("#hintdiv").delay(200).slideDown(400);
+				playAudio('http://localhost:8080/hint.mp3');
+				$("#hintdiv").delay(3000).slideUp(400);
+			});
+		}	
+		
+		var counter = 0;
+		function colorize(correct,img){
+			$("#ans1, #ans2, #ans3, #ans4").unbind('click');
+			$("#ans1, #ans2, #ans3, #ans4").one('click',function(){
+				$( "#ans1, #ans2, #ans3, #ans4, #hintbtn").prop( "disabled", true );
+				if ($(this).val() == correct){ 
+					playAudio('http://localhost:8080/correct.mp3');
+					$(this).css({ 'color': 'green', 'border': '2px solid green' });
+					$( "#emojidiv" ).css( {'background': 'url(img/yes.png) no-repeat'});
+					$( "#emojidiv" ).prop("hidden", false);
+					counter++;
+					//alert("post"+counter);
+					document.getElementById("counter").innerHTML = counter;
+				}
+				else{
+					playAudio('http://localhost:8080/fail.mp3');
+					$(this).css({ 'color': 'orange', 'border': '2px solid orange' });
+					$( "#emojidiv" ).css( {'background': 'url(img/no.png) no-repeat'});
+					$( "#emojidiv" ).prop("hidden", false);
+					if ($("#ans1").val() == correct){
+							$("#ans1").css({ 'color': 'green', 'border': '2px solid green' });
+						}
+					else if ($("#ans2").val() == correct){
+							$("#ans2").css({ 'color': 'green', 'border': '2px solid green' });
+						}
+					else if ($("#ans3").val() == correct){
+							$("#ans3").css({ 'color': 'green', 'border': '2px solid green' });
+						}
+					else if ($("#ans4").val() == correct){
+							$("#ans4").css({ 'color': 'green', 'border': '2px solid green' });
+						}
+				}
+					$( "#fr" + id ).css( {'background': 'url(img/artworks/'+ img +'_1000_81.png) no-repeat', 'background-size': 'contain'});
+			});
+		}
+		
+		function decolorize(){
+			$( "#emojidiv" ).prop("hidden", true);
+			$("#ans1, #ans2, #ans3, #ans4, #hintbtn").prop( "disabled", false ); 
+			$("#ans1, #ans2, #ans3, #ans4").css({'color': 'black', 'border':'2px solid #f1f1f1'});						
+		}
+
+		function fadeOutAnim(coords,id){
+			indexCoords(coords,id);
+			$("#close").click(function(){
+				$("html").delay(1200).fadeOut("1000", function(){
+				window.location.href="end.html";
+				});
+			});
+		}		
+	</script>
+  </head>
+  
+  <body onload="onLoad()">
+  
+	<div id="container" class="container">
+		<button id="fr1" class="frame"></button>
+		<button id="fr2" class="frame"></button>
+		<button id="fr3" class="frame"></button>
+		<button id="fr4" class="frame" disabled></button>
+		<button id="fr5" class="frame" disabled></button>
+		<button id="fr6" class="frame" disabled></button>
+		<button id="fr7" class="frame" disabled></button>
+		<button id="fr8" class="frame" disabled></button>
+		<button id="fr9" class="frame" disabled></button>
+		<button id="fr10" class="frame" disabled></button>
+		<button id="fr11" class="frame" disabled></button>
+		<button id="fr12" class="frame" disabled></button>
+		<button id="fr13" class="frame" disabled></button>
+		<button id="fr14" class="frame" disabled></button>
+		<button id="fr15" class="frame" disabled></button>
+		<button id="fr16" class="frame" disabled></button>
+		<button id="fr17" class="frame" disabled></button>
+		
+		<div id="dialog" class="dialog" >			
+			<div id="dialogcontainer">
+				<a href="#close" title="Close" class="close" id="close">X</a>
+				<button id="hintbtn" class="hintbtn"></button>
+				<h3 id="question">&nbsp;beta</h3>
+				<input type="submit" id="ans1" class="answear" value="beta" /><br>
+				<input type="submit" id="ans2" class="answear" value="beta" /><br>
+				<input type="submit" id="ans3" class="answear" value="beta" /><br>
+				<input type="submit" id="ans4" class="answear" value="beta" />					
+			</div>
+			<div id="hintdiv" class="hint" hidden>
+				&nbsp;beta
+			</div>
+			<div id="emojidiv" class="emoji"  hidden>
+			</div>
+		</div>
+				
+		<div class="footer" >
+			<p style="float: left;"><img src="img/gem.png"/></p>
+			<p class="counter" id="counter" >0</p>
+		</div>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://localhost:8080/js/bootstrap.min.js"></script>
+	<script src="http://localhost:8080/js/jquery-1.12.4.min.js"></script>
+  </body>
+</html>

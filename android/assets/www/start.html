@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Gallery of Treasures</title>
+		
+		
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+	<link href="css/custom.start.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script src="CorHttpd.js"></script>
+	<script type="text/javascript" charset="utf-8" src="http://localhost:8080/js/jquery-3.1.0.js"></script>
+	<script src="http://localhost:8080/js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+	var httpd = null;
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+        getTitle();
+    }
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        document.addEventListener("backbutton", onBackKeyDown, false);
+		$(document).ready();
+		fadeOutAnim();
+    }
+    // Handle the back button
+    //
+    function onBackKeyDown() {
+        console.log('Backbutton key pressed');
+    }
+	
+	// Animation
+	//
+	function fadeOutAnim(){
+		$("#play").click(function(){
+			$("html").fadeOut("1000", function(){
+			window.location.href="main.html";
+			});
+		});
+	}
+    </script>
+
+  </head>
+  
+  <body onload="onLoad()">	
+	<div class="container">
+		<button id="play" class="button"></button>
+		<a href="#dialog"> <button id="info" class="button"></button> </a>
+		
+		<div id="dialog" class="dialog" onload=";">
+			<div>
+				<a href="#close" title="Close" class="close">X</a>
+				<h3>Info</h3>
+				<p>Αυτή η εφαρμογή αναπτύχθηκε στα πλαίσια διπλωματικής εργασίας.</p>
+                <p>Σκοπός του quiz είναι η κατάκτηση του θησαυρού βρίσκοντας τις σωστές απαντήσεις παρατηρώντας τα εκθέματα του χώρου.</p>
+			</div>
+		</div>
+
+	</div>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://localhost:8080/js/bootstrap.min.js"></script>
+	<script src="http://localhost:8080/js/jquery-1.12.4.min.js"></script>
+  </body>
+</html>
