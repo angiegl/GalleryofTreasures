@@ -1,411 +1,231 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <quiz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<item id="1">
-		<question>what</question>
+		<question>Πόσα ενδύματα φοράει ο άγγελος?</question>
 		<answears>
-			<option1 correct="true">mpa1</option1>
+			<option1 correct="true">7</option1>
+			<option2>1</option2>
+			<option3>3</option3>
+			<option4>10</option4>
+		</answears>
+		<hint>μετρούνται στα δάχτυλα δυο χεριών</hint>
+		<coords>111</coords>
+		<image>71304</image>
+	</item>
+	<item id="2">
+		<question>Ποιος έκανε το άλμα από τη μεταβυζαντινή εποχή στην Επτανησιακή σχολή?</question>
+		<answears>
+			<option1 correct="true">Παναγιώτης Δοξαράς</option1>
+			<option2>Δομήνικος Θεοτοκόπουλος</option2>
+			<option3>Αλέξανδρος Δοξαράς</option3>
+			<option4>Μουτζάν</option4>
+		</answears>
+		<hint>δόξα</hint>
+		<coords>111</coords>
+		<image>71304</image>
+	</item>
+	<item id="3">
+		<question>Ποιος άγγελος ζωγραφήθηκε από τον Κωνσταντίνο Παρθένη?</question>
+		<answears>
+			<option1 correct="true">Ευαγγελισμός</option1>
+			<option2>Αρχάγγελος Μιχαήλ</option2>
+			<option3>Σπουδή</option3>
+			<option4>Ακτή</option4>
+		</answears>
+		<hint>25 Μαρτη</hint>
+		<coords>111</coords>
+		<image>63861</image>
+	</item>
+	<item id="4">
+		<question>Πόσοι πίνακες περιλαμβάνουν "άγγελο" στον τίτλο τους?</question>
+		<answears>
+			<option1 correct="true">3</option1>
+			<option2>2</option2>
+			<option3>1</option3>
+			<option4>4</option4>
+		</answears>
+		<hint>ούτε ένας ούτε δύο, αλλά...</hint>
+		<coords>111</coords>
+		<image>63861</image>
+	</item>
+	<item id="5">
+		<question>Βρείτε το μοναδικό πίνακα που αντιπροσωπεύει "νεκρή φύση".</question>
+		<answears>
+			<option1 correct="true">Κυδώνια</option1>
+			<option2>Πεύκα στη Κέρκυρα</option2>
+			<option3>Τοπίο</option3>
+			<option4>Ακτή</option4>
+		</answears>
+		<hint>φρούτα και λουλούδια</hint>
+		<coords>112</coords>
+		<image>71164</image>
+	</item>
+	<item id="6">
+		<question>Βρείτε το μοναδικό έργο στο οποίο απεικονίζεται ένα ανοιχτό συρτάτι.</question>
+		<answears>
+			<option1 correct="true">Κυδώνια</option1>
+			<option2>Γραφή</option2>
+			<option3>Σπίτι σε καμβά</option3>
+			<option4>Μαρτινέγκο</option4>
+		</answears>
+		<hint>φρούτα και γλυκό</hint>
+		<coords>112</coords>
+		<image>71164</image>
+	</item>
+	<item id="7">
+		<question>Ποιος ζωγράφισε το πρώτο γυμνο που βλέπουμε στο χώρο?</question>
+		<answears>
+			<option1 correct="true">Γαλάνης Δημήτριος</option1>
+			<option2>El Greco</option2>
+			<option3>Παρθένης</option3>
+			<option4>Δοξαράς</option4>
+		</answears>
+		<hint>Μήτσος</hint>
+		<coords>112</coords>
+		<image>63125</image>
+	</item>
+	<item id="8">
+		<question>Το "Γυμνό" τι απεικονίζει?</question>
+		<answears>
+			<option1 correct="true">άντρα πάνω σε λευκό σεντόνι</option1>
+			<option2>άντρα πάνω σε κόκκινο σεντόνι</option2>
+			<option3>γυναίκα πάνω σε λευκό σεντόνι</option3>
+			<option4>γυναίκα πάνω σε κόκκινο σεντόνι</option4>
+		</answears>
+		<hint>μόνο αν έχει αχρωματοψία δεν το βλέπεις</hint>
+		<coords>112</coords>
+		<image>63125</image>
+	</item>
+	<item id="9">
+		<question>Σε πόσους πίνακες απεικονίζεται γαϊδουράκι?</question>
+		<answears>
+			<option1 correct="true">2</option1>
+			<option2>1</option2>
+			<option3>3</option3>
+			<option4>κανένα</option4>
+		</answears>
+		<hint>σε ένα είναι κύριο θέμα, μα υπάρχει κι αλλού</hint>
+		<coords>121</coords>
+		<image>64171</image>
+	</item>
+	<item id="10">
+		<question>Ποιο από τα παρακάτω είναι συνόνυμο της λέξης μονοπάτι?</question>
+		<answears>
+			<option1 correct="true">ατροπός</option1>
+			<option2>σατράπης</option2>
+			<option3>δρομάκι</option3>
+			<option4>άρτυ</option4>
+		</answears>
+		<hint>ψάξε στο γαϊδουράκι</hint>
+		<coords>121</coords>
+		<image>64171</image>
+	</item>
+	<item id="11">
+		<question>Πόσα φύλα έχει στο διακοσμητικό στα μαλλιά της το κοριτσάκι?</question>
+		<answears>
+			<option1 correct="true">κανένα</option1>
+			<option2>3</option2>
+			<option3>4</option3>
+			<option4>5</option4>
+		</answears>
+		<hint>φοράει κάτι στα μαλλιά?</hint>
+		<coords>121</coords>
+		<image>61385</image>
+	</item>
+	<item id="12">
+		<question>Ποιο κοριτσάκι είναι τεχνοτροπίας λάδι σε καμβά?</question>
+		<answears>
+			<option1 correct="true">Κοριτσάκι</option1>
+			<option2>Μικρή Κερκυραία</option2>
+			<option3>Παρέα Κεκυραίων</option3>
+			<option4>Κέρκυρα την άνοιξη</option4>
+		</answears>
+		<hint>πόσα κοριτσάκια υπάρχουν?</hint>
+		<coords>121</coords>
+		<image>61385</image>
+	</item>
+	<item id="13">
+		<question>Το χρώμα του σώματος στη γυμνή γυναίκα δεν αναπαριστά το πραγματικό χρώμα.</question>
+		<answears>
+			<option1 correct="true">Σωστό</option1>
+			<option2>Λάθος</option2>
+			<option3>είναι το χρώμα του νεκρού</option3>
+			<option4>είναι το χρώμα δερματος στις αγιογραφίες</option4>
+		</answears>
+		<hint>ισχύει</hint>
+		<coords>122</coords>
+		<image>64200</image>
+	</item>
+	<item id="14">
+		<question>Ποιος ζωγράφισε πρώτος γυμνές γυναίκες στην Επτανησιακή τέχνη?</question>
+		<answears>
+			<option1 correct="true">Γιάννης Μόραλης</option1>
+			<option2>Γαλάνης Δημήτριος</option2>
+			<option3>Κόντογλου Φώτης</option3>
+			<option4>Τσαρούχης Γιάννης</option4>
+		</answears>
+		<hint>το όνομα του θυμίζει ήθος</hint>
+		<coords>122</coords>
+		<image>64200</image>
+	</item>
+	<item id="15">
+		<question>Βρείτε τον πιο εσωτερικό χώρο.</question>
+		<answears>
+			<option1 correct="true">Εσώτερος χώρος</option1>
+			<option2>Κρανίου χώρος</option2>
+			<option3>σφαίρα</option3>
+			<option4>κενό</option4>
+		</answears>
+		<hint>γλυπτό</hint>
+		<coords>122</coords>
+		<image>65693</image>
+	</item>
+	<item id="16">
+		<question>Βρείτε το γλυπτό που μοιάζει με ανθρώπινο κρανίο</question>
+		<answears>
+			<option1 correct="true">Εσώτερος χώρος</option1>
+			<option2>Κρανίου χώρος</option2>
+			<option3>σφαίρα</option3>
+			<option4>κανένα</option4>
+		</answears>
+		<hint>δεν υπάρχει</hint>
+		<coords>122</coords>
+		<image>65693</image>
+	</item>
+	<item id="17">
+		<question>Τι περιέχει μια φωλιά?</question>
+		<answears>
+			<option1 correct="true">άχυρο</option1>
+			<option2>πουλιά</option2>
+			<option3>κλαριά</option3>
+			<option4>σκουλήκια</option4>
+		</answears>
+		<hint>αυτό που φαίνεται στο λυπτό</hint>
+		<coords>131</coords>
+		<image>75606</image>
+	</item>
+	<item id="18">
+		<question>Πόσα γλυπτά είναι φτιαγμένα από φυτικά συστατικά?</question>
+		<answears>
+			<option1 correct="true">2</option1>
+			<option2>1</option2>
+			<option3>κανενα</option3>
+			<option4>3</option4>
+		</answears>
+		<hint>hint18</hint>
+		<coords>131</coords>
+		<image>75606</image>
+	</item>
+	<item id="19">
+		<question>test1</question>
+		<answears>
+			<option1>mpa1</option1>
 			<option2>2</option2>
 			<option3>3</option3>
 			<option4>4</option4>
 		</answears>
 		<hint>hint1</hint>
-		<coords>111</coords>
-		<image>60635</image>
-	</item>
-	<item id="2">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa2</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint2</hint>
-		<coords>111</coords>
-		<image>60667</image>
-	</item>
-	<item id="3">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa3</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint3</hint>
-		<coords>112</coords>
-		<image>60635</image>
-	</item>
-	<item id="4">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa4</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint4</hint>
-		<coords>112</coords>
-		<image>60667</image>
-	</item>
-	<item id="5">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa5</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint5</hint>
-		<coords>121</coords>
-		<image>60635</image>
-	</item>
-	<item id="6">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa6</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint6</hint>
-		<coords>121</coords>
-		<image>60667</image>
-	</item>
-	<item id="7">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa7</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint7</hint>
-		<coords>122</coords>
-		<image>60635</image>
-	</item>
-	<item id="8">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa8</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint8</hint>
-		<coords>122</coords>
-		<image>60667</image>
-	</item>
-	<item id="9">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa9</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint9</hint>
-		<coords>131</coords>
-		<image>60635</image>
-	</item>
-	<item id="10">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa10</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint10</hint>
-		<coords>131</coords>
-		<image>60667</image>
-	</item>
-	<item id="11">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa11</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint11</hint>
 		<coords>132</coords>
-		<image>60635</image>
-	</item>
-	<item id="12">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa12</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint12</hint>
-		<coords>132</coords>
-		<image>60667</image>
-	</item>
-	<item id="13">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa13</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint13</hint>
-		<coords>102</coords>
-		<image>60635</image>
-	</item>
-	<item id="14">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa14</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint14</hint>
-		<coords>102</coords>
-		<image>60667</image>
-	</item>
-	<item id="15">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa15</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint15</hint>
-		<coords>211</coords>
-		<image>60635</image>
-	</item>
-	<item id="16">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa16</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint16</hint>
-		<coords>211</coords>
-		<image>60667</image>
-	</item>
-	<item id="17">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa17</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint17</hint>
-		<coords>212</coords>
-		<image>60635</image>
-	</item>
-	<item id="18">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa18</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint18</hint>
-		<coords>212</coords>
-		<image>60667</image>
-	</item>
-	<item id="19">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa19</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint19</hint>
-		<coords>221</coords>
-		<image>60635</image>
-	</item>
-	<item id="20">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa20</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint20</hint>
-		<coords>221</coords>
-		<image>60667</image>
-	</item>
-	<item id="21">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa21</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint21</hint>
-		<coords>222</coords>
-		<image>60635</image>
-	</item>
-	<item id="22">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa22</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint22</hint>
-		<coords>222</coords>
-		<image>60667</image>
-	</item>
-	<item id="23">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa23</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint23</hint>
-		<coords>231</coords>
-		<image>60635</image>
-	</item>
-	<item id="24">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa24</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint24</hint>
-		<coords>231</coords>
-		<image>60667</image>
-	</item>
-	<item id="25">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa25</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint25</hint>
-		<coords>232</coords>
-		<image>60635</image>
-	</item>
-	<item id="26">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa26</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint26</hint>
-		<coords>232</coords>
-		<image>60667</image>
-	</item>
-	<item id="27">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa27</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint27</hint>
-		<coords>203</coords>
-		<image>60635</image>
-	</item>
-	<item id="28">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa28</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint28</hint>
-		<coords>201</coords>
-		<image>60667</image>
-	</item>
-	<item id="29">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa29</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint29</hint>
-		<coords>311</coords>
-		<image>60635</image>
-	</item>
-	<item id="30">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa30</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint30</hint>
-		<coords>311</coords>
-		<image>60667</image>
-	</item>
-	<item id="31">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa31</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint31</hint>
-		<coords>321</coords>
-		<image>60635</image>
-	</item>
-	<item id="32">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa32</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint32</hint>
-		<coords>321</coords>
-		<image>60667</image>
-	</item>
-	<item id="33">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa33</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint33</hint>
-		<coords>331</coords>
-		<image>60635</image>
-	</item>
-	<item id="34">
-		<question>what</question>
-		<answears>
-			<option1 correct="true">mpa34</option1>
-			<option2>2</option2>
-			<option3>3</option3>
-			<option4>4</option4>
-		</answears>
-		<hint>hint34</hint>
-		<coords>331</coords>
-		<image>60667</image>
+		<image>demo</image>
 	</item>
 </quiz>

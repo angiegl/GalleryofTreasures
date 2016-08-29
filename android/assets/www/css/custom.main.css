@@ -50,6 +50,7 @@ body{
 #fr3{
 	background: url(../img/frame3.png) no-repeat;
 	background-size: contain;
+	-webkit-filter: grayscale(80%);
 	height: 15%;
 	width: 20%;
 	top: 5%;
@@ -263,11 +264,17 @@ body{
 		top: -10px;
 	}
 	
-	.answear{
+	.question{
+		font-size: 20px;
+		word-break: keep-all;
+		white-space: normal;
+	}
+	
+	.answer{
 		border: 2px solid #f1f1f1;
 		border-radius: 10px;
-		padding: 3px;
-		margin: none;
+		padding: 5px;
+		margin: 5px;
 		background-color: transparent;
 		font-size: 18px;
 		max-width: 97%;

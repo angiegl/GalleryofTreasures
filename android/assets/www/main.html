@@ -14,6 +14,7 @@
 	
 	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	<script type="text/javascript" charset="utf-8" src="http://localhost:8080/js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="http://localhost:8080/js/jquery-ui.js"></script>
 	<script src="http://localhost:8080/js/jquery.mobile-1.4.5.js"></script>
 	    <script type="text/javascript" charset="utf-8">
 
@@ -99,11 +100,16 @@
 		function enableNext(){
 			var nextid=id+1;
 			$("#ans1, #ans2, #ans3, #ans4" ).click(function(){
-				$( "#fr" + nextid ).prop( "disabled", false );
-				$( "#fr" + nextid ).css( {'-webkit-filter': 'grayscale(0%)', });
 				$("#hintbtn").prop("disabled", true );
-				// and disableCurrent
 				$( '#fr'+ id ).prop( "disabled", true );
+				$("#close").unbind('click');
+				$("#close" ).click(function(){
+					setTimeout(function(){
+						$( "#fr" + nextid ).prop( "disabled", false );
+						$( "#fr" + nextid ).css( {'-webkit-filter': 'grayscale(0%)' });
+						$( "#fr" + nextid ).effect('shake',{ times: 3, distance : 5});
+					}, 1000);
+				});	
 			});
 		}
 		
@@ -137,7 +143,7 @@
 					indexCoords(coords,id);
 				break;
 				case 7:
-					$( "#dialog" ).css( {'background': 'url(img/stairs.png) no-repeat', 'background-size': '100%' });
+					$( "#dialog" ).css( {'background': 'url(img/stairs1.png) no-repeat', 'background-size': '100%' });
 					coords = 102;
 					indexCoords(coords,id);
 				break;
@@ -167,9 +173,7 @@
 					indexCoords(coords,id);
 				break;
 				case 14:
-					//$("#emojidiv").css({'-webkit-transform': 'matrix(-1,0,0,0,-30,0')});
-					$( "#dialog" ).css( {'background': 'url(img/stairs.png) no-repeat', 'background-size': '100%', 'transform': 'scaleX(-1)' });
-					$("#dialogcontainer, #hintdiv").css({'transform': 'scaleX(-1)'});
+					$( "#dialog" ).css( {'background': 'url(img/stairs2.png) no-repeat' });
 					coords = 203;
 					indexCoords(coords,id);
 				break;
@@ -217,7 +221,6 @@
 					for (l=0; l<4; l++)
 						document.getElementById("ans"+(l+1)).value = q[itemid].getElementsByTagName("option"+points[l])[0].childNodes[0].textContent;
 	
-				
 				var correct = q[itemid].getElementsByTagName("option1")[0].childNodes[0].textContent;
 				var img = q[itemid].getElementsByTagName("image")[0].childNodes[0].textContent;
 				displayDialog(correct,img);	
@@ -272,7 +275,7 @@
 							$("#ans4").css({ 'color': 'green', 'border': '2px solid green' });
 						}
 				}
-					$( "#fr" + id ).css( {'background': 'url(img/artworks/'+ img +'_1000_81.png) no-repeat', 'background-size': 'contain'});
+					$( "#fr" + id ).css( {'background': 'url(img/artworks/'+ img +'_1000_81.jpg) no-repeat', 'background-size': 'contain'});
 			});
 		}
 		
@@ -298,7 +301,7 @@
 	<div id="container" class="container">
 		<button id="fr1" class="frame"></button>
 		<button id="fr2" class="frame"></button>
-		<button id="fr3" class="frame"></button>
+		<button id="fr3" class="frame" disabled></button>
 		<button id="fr4" class="frame" disabled></button>
 		<button id="fr5" class="frame" disabled></button>
 		<button id="fr6" class="frame" disabled></button>
@@ -318,11 +321,11 @@
 			<div id="dialogcontainer">
 				<a href="#close" title="Close" class="close" id="close">X</a>
 				<button id="hintbtn" class="hintbtn"></button>
-				<h3 id="question">&nbsp;beta</h3>
-				<input type="submit" id="ans1" class="answear" value="beta" /><br>
-				<input type="submit" id="ans2" class="answear" value="beta" /><br>
-				<input type="submit" id="ans3" class="answear" value="beta" /><br>
-				<input type="submit" id="ans4" class="answear" value="beta" />					
+				<h4 id="question" class="question">&nbsp;beta</h4>
+				<input type="submit" id="ans1" class="answer" value="beta" />
+				<input type="submit" id="ans2" class="answer" value="beta" />
+				<input type="submit" id="ans3" class="answer" value="beta" />
+				<input type="submit" id="ans4" class="answer" value="beta" />					
 			</div>
 			<div id="hintdiv" class="hint" hidden>
 				&nbsp;beta
